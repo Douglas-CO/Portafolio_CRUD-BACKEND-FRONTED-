@@ -1,0 +1,273 @@
+/*HEADER*/
+.arriba{
+    position: fixed;
+    height:2.5cm;
+    width: 100%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+.logo{
+    position:absolute;
+    top: -20px;
+    left: 45%;
+    width: 40mm;
+    height: 40mm;
+    cursor: pointer;
+}
+.logo:hover{
+    position: absolute;
+    top: -18px;
+    left: 44.9%;
+    width: 41mm;
+    height: 41mm;
+}
+.activador{
+    position: absolute;
+    top: 0.5cm;
+    right: 1cm;
+    font-size: 1cm;
+    background: transparent;
+    border-color: transparent;
+    color: rgb(234, 234, 234);
+    transition: white;
+    cursor: pointer;
+}
+.activador:hover{
+    animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+.subtitulo{
+    position: absolute;
+    top: 2.5cm;
+    left: 0;
+    width: 100%;
+    height: 10mm;
+    background-color: #4d555c;
+}
+.sub{
+    position: absolute;
+    top: 0.1cm;
+    left: 25%;
+}
+/*INDEX*/
+.boxes{
+    position:absolute;
+    top: 4.5cm;
+    text-decoration: none;
+}
+.name{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: #0000006b;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 24px;
+    padding: 0.5cm 32px;
+}
+.name:hover{
+    opacity:1;
+}
+/*FOOTER*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f6f2f2;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  transition: all 0.3s linear;
+  transform: translate(-100%);
+  border: 1px solid #1c262b;
+  z-index: 10;
+}
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem ;
+  background-color: #4d555c;
+  border: 1px solid #1c262b8a;
+}
+.logotipo{
+  justify-self: center;
+  height: 40mm;
+}
+.close-btn {
+  font-size: 1.75rem;
+  position: absolute;
+  top: 0;
+  left: 90%;
+  background: transparent;
+  border-color: transparent;
+  color: #1c262b;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  color: #1c262b;
+}
+.close-btn:hover {
+  color: #1c262b;
+  transform: rotate(360deg);
+}
+
+.links button{
+  position: absolute;
+  left:0;
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: transparent;
+  padding: 0.5rem 1rem;
+  color: #347cda;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+.links button:hover {
+  background: #347cda;
+  color: #347cda;
+  padding-left: 1cm;
+}
+
+.links a {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  color: #1c262b;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+.links a:hover {
+  background: #92a194;
+  border: 1px solid #1c262b8a;
+  color: rgb(245, 245, 245);
+  padding-left: 1cm;
+}
+.show-sidebar {
+  transform: translate(0);
+}
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 300px;
+  }
+}
+
+
+#creador-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.img-container::after {
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+}
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #1c262b;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+/*CATEGORIAS*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #64748b70;
+  display: grid;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  z-index: -10;
+}
+.añadir{
+  position:fixed;
+  width:15cm;
+  height: auto;
+  top:6cm;
+  right: 9cm;
+  
+}
+.open-modal {
+  visibility: visible;
+  z-index: 1;
+}
+.modal-container {
+  width: 90vw;
+  height: 30vh;
+  max-width: 620px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+  left:9.5cm;
+  top:-2.5cm;
+}
+.close-btn2 {
+  position: absolute;
+  top: 6.3cm;
+  right: -2cm;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.bajar{
+  position: fixed;
+  top:7cm;
+  left:1cm;
+  width:6cm;
+}
+.observar{
+  position:relative;
+  top:-2cm;
+  width:20cm;
+  left:11cm;
+}
+
+.mayus{
+  text-transform: uppercase;
+}
